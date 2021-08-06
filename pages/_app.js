@@ -1,26 +1,24 @@
-import React from "react";
-import { Button } from "antd";
 import "./App.css";
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 
-const App = () => (
-  
 
-  <div className="App">
-    <div className="Container">
-     
-     s
-     
-      <h1>Toca muito!</h1>
-      <span>
-        Utilize o Soundzera para ter o máximo de desempenho no seu som.
-      </span>
-      <div>
-      <Link href={`/OhmCalc`}><Button type="primary">Buttons</Button></Link>
-      </div>
-    </div>
-  </div>
-);
+function MyApp({ Component, pageProps }) {
+    return (
+        <div>
+            <Component {...pageProps} />
+        </div>
+    )
+}
 
-export default App;
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
+
+export default MyApp
