@@ -65,7 +65,7 @@ const OhmCalc = () => {
                   <span className="input-group-text" id="basic-addon1">Ω</span>
                   <input onChange={event => onHandleNumber(event, index)} value={speaker.value} type="number" className="form-control " placeholder="Impedância" />
                   <div className="input-group-append">
-                    <a onClick={() => removeSpeaker(speaker, index)}><span className="input-group-text"><i className="bi bi-trash" /></span></a>
+                    <button className="btn btn-danger"onClick={() => removeSpeaker(speaker, index)}><i className="bi bi-trash" /></button>
                   </div>
                 </div>
               </div>
